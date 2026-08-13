@@ -1,0 +1,52 @@
+# --- Case evidence (never push FIR / bank / CDR dumps) ---
+/bank_account/
+/bank_statements_and_next_stage/
+/cdr_extraction/
+/ingestion_p/
+/ipdr_docs/
+/accounts.csv
+/transactions.csv
+/UNIFIED_MASTER_CDR.csv
+/output.xlsx
+/output_ipdr.csv
+/output_secondary.xlsx
+/ipdr_extracter.py
+/ps3.docx
+/scemas.txt
+/*.csv
+/*.xlsx
+/*.xls
+/*.xlsm
+/*.pdf
+/*.docx
+
+# --- Runtime / secrets ---
+.env
+.env.*
+!.env.example
+web/frontend/.env.local
+web/backend/.env
+web/backend/uploads/
+web/backend/.venv/
+.venv/
+venv/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# --- Node / Next ---
+web/frontend/node_modules/
+web/frontend/.next/
+web/frontend/out/
+web/frontend/tsbuildinfo
+*.tsbuildinfo
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

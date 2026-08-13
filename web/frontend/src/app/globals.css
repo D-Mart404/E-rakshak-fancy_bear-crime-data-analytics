@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  /* Investigation workspace — teal accent, not purple-default */
+  --bg: #0b1220;
+  --rail: #070d18;
+  --surface: #111827;
+  --surface-2: #1a2332;
+  --border: #243044;
+  --text: #e8eef7;
+  --muted: #8b9bb4;
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --ok: #059669;
+  --warn: #d97706;
+  --danger: #dc2626;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Make native controls readable on dark UI */
+select,
+input,
+textarea {
+  color-scheme: dark;
+}
