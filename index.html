@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Cybercrime Investigation & Reasoning Engine (FIR-2026-0417)</title>
+
+  <!-- Google Fonts & D3.js -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Embedded Data Bundle -->
+  <script src="data.js"></script>
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header glass-panel">
+    <div class="brand-title">
+      <div class="brand-icon">🛡️</div>
+      <div class="brand-text">
+        <h1>FINANCIAL CYBERCRIME INVESTIGATION COMMAND CENTER</h1>
+        <p>Case-Centric Longitudinal Graph Analytics, Cross-Dataset Correlations & Evidentiary Reporting</p>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <span class="badge badge-purple" style="font-size:12px; padding:6px 12px;">EVIDENTIARY REASONING READY</span>
+    </div>
+  </header>
+
+  <!-- Case Workspace Banner -->
+  <div class="case-banner">
+    <div>
+      <strong>📁 Active Case Workspace:</strong> <span style="color:var(--accent-cyan); font-weight:700;">FIR-2026-0417</span> (Special Financial Cybercrime Unit)
+    </div>
+    <div>
+      <strong>👤 Lead Investigator:</strong> Inspector V. Sharma • <span style="color:var(--accent-emerald);">Audit Trail Active</span>
+    </div>
+  </div>
+
+  <!-- Navigation Tabs -->
+  <nav class="nav-tabs">
+    <button class="tab-btn active" data-tab="command">🏠 Case Command Center</button>
+    <button class="tab-btn" data-tab="findings">🧠 Case Findings & Correlations</button>
+    <button class="tab-btn" data-tab="graph">🕸️ Ego-Network Graph</button>
+    <button class="tab-btn" data-tab="sankey">💰 Money Flow & Pass-Through</button>
+    <button class="tab-btn" data-tab="timeline">🔎 Suspicious Timeline Explorer</button>
+    <button class="tab-btn" data-tab="leaderboard">🚨 Top Priority Leads</button>
+    <button class="tab-btn" data-tab="str">📜 Master Case Report & STR</button>
+    <button class="tab-btn" data-tab="audit">📑 Case Audit Trail</button>
+  </nav>
+
+  <!-- TAB 0: CASE COMMAND CENTER (PRIMARY OVERVIEW) -->
+  <div class="tab-content active" id="tab-command">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      
+      <!-- System Summary Stats Grid -->
+      <div class="stats-banner">
+        <div class="stat-box glass-panel">
+          <div class="stat-num" id="cmd-seeds-val">4</div>
+          <div class="stat-desc">FIR Seed Suspects</div>
+        </div>
+        <div class="stat-box glass-panel">
+          <div class="stat-num" id="cmd-entities-val" style="color:var(--accent-purple);">1,877</div>
+          <div class="stat-desc">Resolved Entities</div>
+        </div>
+        <div class="stat-box glass-panel">
+          <div class="stat-num" id="cmd-money-val" style="color:var(--accent-emerald);">₹ 2.84 Cr</div>
+          <div class="stat-desc">Total Money Traced</div>
+        </div>
+        <div class="stat-box glass-panel">
+          <div class="stat-num" id="cmd-events-val" style="color:var(--accent-blue);">174,792</div>
+          <div class="stat-desc">Total Events (Bank/CDR/IP)</div>
+        </div>
+        <div class="stat-box glass-panel">
+          <div class="stat-num" id="cmd-leads-val" style="color:var(--accent-crimson);">47</div>
+          <div class="stat-desc">Suspicious Priority Leads</div>
+        </div>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Top Case Findings List -->
+        <div class="glass-panel" style="padding:16px; height:740px; display:flex; flex-direction:column;">
+          <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span>🚨 Top Case Findings (Automated Intelligence Engine)</span>
+            <span class="badge badge-red" id="cmd-findings-badge">7 High-Confidence Findings</span>
+          </h3>
+          <div id="command-findings-container" style="flex:1; overflow-y:auto; padding-right:6px; display:flex; flex-direction:column; gap:10px;">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- Discovered Network Rings Summary -->
+        <div class="glass-panel" style="padding:16px; height:740px; display:flex; flex-direction:column;">
+          <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:12px;">
+            🌐 Discovered Network Rings & Community Clusters
+          </h3>
+          <div id="command-networks-container" style="flex:1; overflow-y:auto; padding-right:6px; display:flex; flex-direction:column; gap:10px;">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TAB 1: CASE FINDINGS & CROSS-DATASET CORRELATIONS -->
+  <div class="tab-content" id="tab-findings">
+    <div class="grid-2col">
+      <!-- Left Column: Correlation Engine with Independent Scrollable Container -->
+      <div class="glass-panel" style="padding:16px; height:740px; display:flex; flex-direction:column;">
+        <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span>🔗 Cross-Dataset Correlation Engine</span>
+          <span style="font-size:10px; background:rgba(6,182,212,0.15); color:var(--accent-cyan); padding:2px 8px; border-radius:4px; font-weight:600;">CALL ➔ IP ➔ FINANCIAL TRANSFER</span>
+        </h3>
+        <p style="font-size:12px; color:var(--text-secondary); margin-bottom:12px;">
+          Detecting temporal coincidences where telecom phone calls and IPDR internet sessions precede financial transfers within ±10 minutes.
+        </p>
+        <div id="findings-correlations-container" style="flex:1; overflow-y:auto; padding-right:6px; display:flex; flex-direction:column; gap:10px;">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Investigation Query Console with Independent Scrollable Container -->
+      <div class="glass-panel" style="padding:16px; height:740px; display:flex; flex-direction:column;">
+        <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:8px;">
+          🔎 Interactive Investigation Query Console
+        </h3>
+
+        <!-- User Guide & Quick-Start Card -->
+        <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(56,189,248,0.2); padding:10px 12px; border-radius:8px; margin-bottom:12px; font-size:11px; color:var(--text-secondary); line-height:1.5;">
+          <strong style="color:#38bdf8;">💡 How to use the Query Console:</strong>
+          <ul style="padding-left:16px; margin-top:4px; margin-bottom:2px;">
+            <li>Type natural language terms or keywords (e.g., <em>"multi-seed"</em>, <em>"forwarding"</em>, <em>"Sajid"</em>, <em>"anomaly"</em>).</li>
+            <li>Or click any preset query chip below to run instant pattern matching across 174k+ records.</li>
+          </ul>
+        </div>
+
+        <!-- Query Input Bar -->
+        <div style="display:flex; gap:10px; margin-bottom:12px;">
+          <input type="text" id="finding-query-input" class="search-input" placeholder="Ask e.g. 'Which account received money from >1 FIR suspect?'" onkeyup="if(event.key==='Enter') runFindingQuery();">
+          <button class="btn-primary" onclick="runFindingQuery()">Query</button>
+        </div>
+
+        <!-- Quick Query Category Chips -->
+        <div style="font-size:11px; margin-bottom:12px;">
+          <span style="color:var(--text-muted); font-weight:600; display:block; margin-bottom:6px;">Preset Case Queries:</span>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <button class="badge badge-cyan" style="cursor:pointer; border:1px solid rgba(6,182,212,0.3); background:rgba(6,182,212,0.1); padding:4px 10px;" onclick="setQuery('Show accounts connecting multiple FIR suspects');">🎯 Multi-Seed Convergence</button>
+            <button class="badge badge-amber" style="cursor:pointer; border:1px solid rgba(245,158,11,0.3); background:rgba(245,158,11,0.1); padding:4px 10px;" onclick="setQuery('Which account forwarded >90% of money within 1 hour?');">⚡ Rapid Layering Mules</button>
+            <button class="badge badge-purple" style="cursor:pointer; border:1px solid rgba(168,85,247,0.3); background:rgba(168,85,247,0.1); padding:4px 10px;" onclick="setQuery('Show call -> IP -> transfer sequences within 10 minutes');">📞 Call ➔ Transfer Coincidences</button>
+            <button class="badge badge-emerald" style="cursor:pointer; border:1px solid rgba(16,185,129,0.3); background:rgba(16,185,129,0.1); padding:4px 10px;" onclick="setQuery('Show gather scatter collection hubs with high fan-in');">🏢 Fan-In Collection Hubs</button>
+            <button class="badge badge-red" style="cursor:pointer; border:1px solid rgba(239,68,68,0.3); background:rgba(239,68,68,0.1); padding:4px 10px;" onclick="setQuery('Show entities with high anomaly indices');">📊 Isolation Forest Outliers</button>
+          </div>
+        </div>
+
+        <!-- Scrollable Results Container -->
+        <div id="finding-query-results" style="flex:1; overflow-y:auto; padding-right:6px; font-size:12px; color:var(--text-secondary);">
+          <div style="padding:20px; text-align:center; color:var(--text-muted); border:1px dashed var(--glass-border); border-radius:8px;">
+            Select a preset query above or enter custom keywords to query the forensic database.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: EGO-NETWORK GRAPH VISUALIZER -->
+  <div class="tab-content" id="tab-graph">
+    <div class="grid-graph-layout">
+      <div class="sidebar-box glass-panel">
+        <h3 style="color:var(--accent-cyan); font-size:14px;">Graph Controls & Filters</h3>
+        <div>
+          <label class="detail-label" style="margin-bottom:4px;">Max Seed Hop Distance: <span id="hop-val-disp">5</span></label>
+          <input type="range" id="graph-hop-filter" min="1" max="5" value="5" style="width:100%;" onchange="document.getElementById('hop-val-disp').innerText=this.value; updateGraphFilters();">
+        </div>
+        <div>
+          <label class="detail-label" style="margin-bottom:4px;">Min Risk Score: <span id="risk-val-disp">0</span></label>
+          <input type="range" id="graph-risk-filter" min="0" max="100" value="0" style="width:100%;" onchange="document.getElementById('risk-val-disp').innerText=this.value; updateGraphFilters();">
+        </div>
+        <div>
+          <label class="detail-label" style="margin-bottom:4px;">Filter Node Type</label>
+          <select id="graph-type-filter" class="select-input" onchange="updateGraphFilters();">
+            <option value="ALL">All Node Types</option>
+            <option value="ENTITY">Entities / Persons</option>
+            <option value="ACCOUNT">Bank Accounts</option>
+            <option value="PHONE">CDR Mobile Phones</option>
+          </select>
+        </div>
+        <div style="margin-top:6px;">
+          <label style="font-size:12px; cursor:pointer; color:var(--accent-amber);">
+            <input type="checkbox" id="graph-spotlight-toggle" onchange="updateGraphFilters();"> 🚨 Alert Spotlighting (High Risk Only)
+          </label>
+        </div>
+      </div>
+
+      <div class="graph-container glass-panel" id="graph-canvas-container">
+        <!-- SVG injected by D3 -->
+      </div>
+
+      <div class="node-details-card glass-panel" id="node-inspect-card">
+        <div style="text-align:center; color:var(--text-muted); padding-top:100px;">
+          Click any node in the graph to inspect its risk profile, forensic evidence, and raw technical analytics.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: SANKEY FINANCIAL FLOW -->
+  <div class="tab-content" id="tab-sankey">
+    <div class="glass-panel" style="padding:20px;">
+      <h3 style="color:var(--accent-cyan); margin-bottom:12px; font-size:16px;">Sankey Financial Flow: High-Volume Fund Movement Across Entities</h3>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+        Visualizing proportional money transfer volumes across account clusters and laundering nodes.
+      </p>
+      <div id="sankey-canvas">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: SUSPICIOUS TIMELINE EXPLORER & EPISODES ENGINE -->
+  <div class="tab-content" id="tab-timeline">
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      
+      <!-- Compression Funnel Banner -->
+      <div class="glass-panel" style="padding:14px; background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.9)); border:1px solid var(--accent-cyan);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <h3 style="color:var(--accent-cyan); font-size:15px; margin:0;">🔎 SUSPICIOUS TIMELINE EXPLORER: INTELLIGENT EPISODE ENGINE</h3>
+          <button class="btn-primary" style="padding:4px 10px; font-size:11px; background:linear-gradient(135deg, #10b981, #06b6d4);" onclick="playStoryMode()">▶ Play Story Mode Animation</button>
+        </div>
+        
+        <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); padding:10px; border-radius:6px; font-size:11px;">
+          <span><strong>174,792</strong> Raw Events</span>
+          <span style="color:var(--text-muted);">➔</span>
+          <span><strong>31,420</strong> Active Periods</span>
+          <span style="color:var(--text-muted);">➔</span>
+          <span><strong>1,842</strong> Anomalous Windows</span>
+          <span style="color:var(--text-muted);">➔</span>
+          <span style="color:var(--accent-cyan); font-weight:700;">217 Correlation Windows</span>
+          <span style="color:var(--text-muted);">➔</span>
+          <span style="color:var(--accent-amber); font-weight:700;">37 Suspicious Episodes</span>
+          <span style="color:var(--text-muted);">➔</span>
+          <span class="badge badge-red" style="font-size:11px;">6 CRITICAL EPISODES</span>
+        </div>
+      </div>
+
+      <!-- Timeline Sub-Navigation Tabs -->
+      <div style="display:flex; gap:8px; border-bottom:1px solid var(--glass-border); padding-bottom:8px;">
+        <button class="btn-primary timeline-subtab-btn active" onclick="switchTimelineSubtab('episodes')">⏱ Suspicious Episodes (Compressed View)</button>
+        <button class="btn-primary timeline-subtab-btn" style="background:rgba(255,255,255,0.08);" onclick="switchTimelineSubtab('correlations')">🔗 Correlation Windows</button>
+        <button class="btn-primary timeline-subtab-btn" style="background:rgba(255,255,255,0.08);" onclick="switchTimelineSubtab('heatmap')">🔥 Timeline Activity Heatmap</button>
+        <button class="btn-primary timeline-subtab-btn" style="background:rgba(255,255,255,0.08);" onclick="switchTimelineSubtab('stream')">📑 Unified Raw Stream</button>
+      </div>
+
+      <!-- SUB-VIEW 1: SUSPICIOUS EPISODES (COMPRESSED) -->
+      <div id="timeline-sub-episodes" class="timeline-subview active">
+        <div id="suspicious-episodes-container" style="display:flex; flex-direction:column; gap:12px;">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 2: CORRELATION WINDOWS -->
+      <div id="timeline-sub-correlations" class="timeline-subview" style="display:none;">
+        <div class="glass-panel" style="padding:16px;">
+          <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:10px;">🔗 Temporal Correlation Windows (Call ➔ IP ➔ Bank Transfer)</h3>
+          <div id="timeline-correlations-table-container">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 3: TIMELINE ACTIVITY HEATMAP -->
+      <div id="timeline-sub-heatmap" class="timeline-subview" style="display:none;">
+        <div class="glass-panel" style="padding:16px;">
+          <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:10px;">🔥 Investigation Activity Heatmap (Entities vs Hourly Time Slots)</h3>
+          <p style="font-size:12px; color:var(--text-secondary); margin-bottom:14px;">
+            Displays concurrent activity bursts across entities over 24-hour window cycles.
+          </p>
+          <div id="timeline-heatmap-container" style="overflow-x:auto;">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW 4: UNIFIED RAW STREAM -->
+      <div id="timeline-sub-stream" class="timeline-subview" style="display:none;">
+        <div class="grid-2col">
+          <div class="sidebar-box glass-panel">
+            <h3 style="color:var(--accent-cyan); font-size:14px; margin-bottom:8px;">Entities / Persons</h3>
+            <input type="text" id="sidebar-entity-search" class="search-input" placeholder="Search entity..." oninput="renderEntityTimelineSidebar()">
+            <div class="entity-scroll-list" id="timeline-entity-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="glass-panel" style="padding:16px; display:flex; flex-direction:column; gap:12px;">
+            <div style="border-bottom:1px solid var(--glass-border); padding-bottom:10px;">
+              <h2 id="timeline-prof-name" style="color:var(--accent-cyan); font-size:16px;">Select an Entity</h2>
+              <div style="display:flex; gap:16px; font-size:12px; color:var(--text-secondary); margin-top:4px;">
+                <span>Accounts: <strong id="timeline-prof-accs" style="color:#fff;">--</strong></span>
+                <span>Phones: <strong id="timeline-prof-phones" style="color:#fff;">--</strong></span>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px;">
+              <input type="text" id="timeline-event-search" class="search-input" placeholder="Search narration, phone, location..." oninput="renderTimelineStream(timelinesData[document.getElementById('timeline-prof-name').innerText] || [])">
+              <select id="timeline-source-filter" class="select-input" style="width:200px;" onchange="renderTimelineStream(timelinesData[document.getElementById('timeline-prof-name').innerText] || [])">
+                <option value="ALL">All Data Sources</option>
+                <option value="Transaction">Transactions Only</option>
+                <option value="CDR">CDR Calls Only</option>
+                <option value="IPDR">IPDR Internet Only</option>
+              </select>
+            </div>
+
+            <div class="timeline-stream" id="timeline-stream-container">
+              Select an entity on the left to inspect their unified event stream.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TAB 5: TOP PRIORITY LEADS -->
+  <div class="tab-content" id="tab-leaderboard">
+    <div class="glass-panel data-table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Investigative Lead Entity</th>
+            <th>Classified Role</th>
+            <th>Composite Risk Score</th>
+            <th>Triage Category</th>
+            <th>Pass-Through %</th>
+            <th>Primary Motifs</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-tbody">
+          <!-- Populated by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB 6: MASTER CASE INTELLIGENCE REPORT & STR -->
+  <div class="tab-content" id="tab-str">
+    <div class="grid-2col">
+      <div class="glass-panel" style="padding:16px; display:flex; flex-direction:column; gap:14px;">
+        <h3 style="color:var(--accent-cyan); font-size:15px;">Report Generator Console</h3>
+        <p style="font-size:12px; color:var(--text-secondary);">
+          Select report level: Master Case Report covering all 4 FIR seeds, Discovered Network Ring Report, or Individual Entity STR.
+        </p>
+
+        <div style="display:flex; gap:8px;">
+          <button class="btn-primary" style="flex:1; font-size:11px;" onclick="renderMasterCaseReport()">Master Case Report</button>
+          <button class="btn-primary" style="flex:1; font-size:11px; background:rgba(255,255,255,0.1);" onclick="renderNetworkRingReport()">Network Ring Report</button>
+        </div>
+
+        <div style="font-size:11px; color:var(--text-muted);">
+          <strong>Individual STR Reports:</strong>
+          <ul style="padding-left:16px; margin-top:4px; display:flex; flex-direction:column; gap:3px;">
+            <li style="cursor:pointer; color:var(--accent-cyan);" onclick="generateSTRReport('SAJID AHMAD / GAURAV BAGAN MALLIK (A1 DREAM / AALIYA)');">"Sajid Ahmad / Gaurav Bagan Mallik"</li>
+            <li style="cursor:pointer; color:var(--accent-cyan);" onclick="generateSTRReport('RAKHOLIYA GAURANG HARSUKHBHAI (ROYAL CREATION)');">"Rakholiya Gaurang Harsukhbhai"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass-panel" style="padding:16px; overflow-y:auto; max-height:720px;">
+        <h3 style="color:var(--accent-cyan); font-size:15px; margin-bottom:10px;">Evidentiary Document Preview</h3>
+        <div id="str-report-container">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 7: CASE AUDIT TRAIL -->
+  <div class="tab-content" id="tab-audit">
+    <div class="glass-panel" style="padding:20px;">
+      <h3 style="color:var(--accent-cyan); margin-bottom:12px; font-size:16px;">Case FIR-2026-0417 Audit Trail & Evidentiary Log</h3>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+        Immutable activity log tracking system ingestions, algorithmic rule triggers, and investigator actions for courtroom admissibility.
+      </p>
+      <div id="audit-trail-container">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Controller JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
